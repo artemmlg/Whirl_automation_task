@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'net.ltgt.apt' version '0.10'
+}
+
+group 'com.whirl'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    // Selenide (selenium wrapper)
+    testCompile 'com.codeborne:selenide:5.1.0'
+    // Rest Assured (api automation)
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.6'
+    // TestNG (test runner)
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+    // OWNER (properties)
+    compile group: 'org.aeonbits.owner', name: 'owner-java8', version: '1.0.10'
+    // Faker (pre-populate fake data) 
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '0.16'
+    // Lombok (get/set incapsulation)
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+    apt 'org.projectlombok:lombok:1.18.4'
+    // https://mvnrepository.com/artifact/org.hamcrest/hamcrest-library
+    compileOnly group: 'org.hamcrest', name: 'hamcrest-library', version: '2.1'
+
+}
