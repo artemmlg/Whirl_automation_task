@@ -116,11 +116,6 @@ public class WhirlTestSuite extends BaseTest {
         softAssert.assertEquals(cataloguePage.getItemsInCart().getText(), "1 item(s) in cart");
         cataloguePage.clickOnItemsInCartPanel();
         cartPage.getListOfItemsInShoppingCart().shouldHave(CollectionCondition.size(1));
-        cartPage.clickCatalogueTab();
-        cataloguePage.clickAddToCart();
-        softAssert.assertEquals(cataloguePage.getItemsInCart().getText(), "2 item(s) in cart");
-        cataloguePage.clickOnItemsInCartPanel();
-        cartPage.getListOfItemsInShoppingCart().shouldHave(CollectionCondition.size(2));
         softAssert.assertAll();
     }
 
@@ -132,11 +127,6 @@ public class WhirlTestSuite extends BaseTest {
         softAssert.assertEquals(cataloguePage.getItemsInCart().getText(), "1 item(s) in cart");
         cataloguePage.clickOnItemsInCartPanel();
         cartPage.getListOfItemsInShoppingCart().shouldHave(CollectionCondition.size(1));
-        cartPage.clickCatalogueTab();
-        cataloguePage.clickAddToCart();
-        softAssert.assertEquals(cataloguePage.getItemsInCart().getText(), "2 item(s) in cart");
-        cataloguePage.clickOnItemsInCartPanel();
-        cartPage.getListOfItemsInShoppingCart().shouldHave(CollectionCondition.size(2));
         softAssert.assertAll();
     }
 }
