@@ -3,6 +3,10 @@ plugins {
     id 'idea'
 }
 
+test {
+    useTestNG()
+}
+
 group 'com.whirl'
 version '1.0-SNAPSHOT'
 
